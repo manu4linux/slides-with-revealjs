@@ -34,16 +34,44 @@
                 <script src="plugin/notes/notes.js"></script>
                 <script src="plugin/markdown/markdown.js"></script>
                 <script src="plugin/highlight/highlight.js"></script>
+                <script src="plugin/fullscreen/plugin.js"></script>
+                <script src="plugin/chalkboard/plugin.js"></script>
+                <script src="plugin/menu/menu.js"></script>
+                <script src="plugin/chart/Chart.min.js"></script>
+                <script src="plugin/chart/plugin.js"></script>
                 <script>
                         // More info about initialization & config:
                         // - https://revealjs.com/initialization/
                         // - https://revealjs.com/config/
                         Reveal.initialize({
                                 hash: true,
+                                slideNumber: true,
 
                                 // Learn about plugins: https://revealjs.com/plugins/
-                                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+                                // - https://github.com/rajgoel/reveal.js-demos
+                                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealFullscreen, RevealChalkboard, RevealMenu, RevealChart ],
+                                menu: {  // Note: specifying highlightTheme without a theme will
+                                // change the code highlight theme while leaving the
+                                // presentation theme unchanged.
+                                themes: true,
+
+                                // Specifies the path to the default theme files. If your
+                                // presentation uses a different path to the standard reveal
+                                // layout then you need to provide this option, but only
+                                // when 'themes' is set to 'true'. If you provide your own
+                                // list of themes or 'themes' is set to 'false' the
+                                // 'themesPath' option is ignored.
+                                // themesPath: 'dist/theme/',
+
+                                // Specifies if the transitions menu panel will be shown.
+                                // Set to 'true' to show the transitions menu panel with
+                                // the default transitions list. Alternatively, provide an
+                                // array to specify the transitions to make available in
+                                // the transitions panel, for example...
+                                // ['None', 'Fade', 'Slide']
+                                transitions: true }
                         });
+                        
                 </script>
         </body>
 </html>
